@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td>
+        <input
+          type="checkbox"
+          (change)="onCheckboxChange(row, $event)">
+      </td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.age }}</td>
+      <td>{{ row.status }}</td>
+    </tr>
+  </tbody>
+</table>
